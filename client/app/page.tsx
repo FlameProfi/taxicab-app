@@ -26,12 +26,12 @@ export default function Home() {
         Мы обеспечим вам комфорт и скорость<br/>
         таксопарк всегда на связи!</h1>
         <div className='buttons'>
-        <div onClick={() => push('/auth/register')}>
-        <Button variant="contained" color="success" disableElevation>
+        <div onClick={() => push('/auth/register')} style={{width: "170px"}}>
+        <Button variant="contained" color="success" fullWidth disableElevation>
           Присоедениться
           </Button></div>
-          <div onClick={() => push('/auth')}> 
-        <Button variant="contained" disableElevation>
+          <div onClick={() => push('/auth')} style={{width: "170px"}}> 
+        <Button variant="contained" fullWidth disableElevation>
           Войти
           </Button></div>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
     {`
       .center{
         display: flex;
-        justify-content:center;
+        justify-content:start;
         align-items:center;
         flex-direction: column;
         width: 100vw;
@@ -55,15 +55,15 @@ export default function Home() {
         h1{
         margin: 5px 0 40px;
         z-index: 999;
-        font-family: 'Judson';
+        font-family: var(--font-exo);
         font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 56px;
+        font-weight:200;
+        font-size: 50px;
+        
+        line-height: 120%;
         display: flex;
         align-items: center;
         text-align: center;
-
         color: #FFFFFF;
 
 

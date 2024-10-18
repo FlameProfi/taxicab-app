@@ -1,12 +1,13 @@
 'use client'
-import ArchiveIcon from '@mui/icons-material/Archive'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import RestoreIcon from '@mui/icons-material/Restore'
+import HomeIcon from '@mui/icons-material/Home'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SettingsIcon from '@mui/icons-material/Settings';
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import * as React from 'react'
+import { Avatar } from '@mui/material';
 
 
 export default function NavBar() {
@@ -18,14 +19,15 @@ export default function NavBar() {
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
         <BottomNavigation
           showLabels
+          style={{backgroundColor: "#242424", color: "#fff"}}
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Главная" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+          <BottomNavigationAction sx={{ color: "#fff", opacity: 0.5, ":active": { opacity: 1}}} label="Главная" icon={<HomeIcon sx={{fill: "#fff"}}/>}  />
+          <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}} label="Настройки" icon={<SettingsIcon sx={{fill: "#fff"}} />} />
+          <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}} label="Профиль" icon={<AccountCircleIcon sx={{fill: "#fff"}} />} />
         </BottomNavigation>
       </Paper>
     </Box>

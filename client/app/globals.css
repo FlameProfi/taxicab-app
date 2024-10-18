@@ -24,6 +24,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.Mui-selected{
+  opacity: 1;
+  color: #fff;
+  font-family: var(--font-exo);
+  font-weight: 500;
+  transition: 0.4s;
+  transition-delay: 0;
+}
+
+.MuiBottomNavigationAction-label{
+  transition: 0.4s;
+  transition-delay: 0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

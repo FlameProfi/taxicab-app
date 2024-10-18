@@ -1,6 +1,11 @@
 import { Container } from '@mui/material'
 import NavBar from '../components/navBar'
-const MainLayout: React.FC = ({children}) => {
+import { ReactNode } from 'react';
+
+interface Props {
+	children: ReactNode;
+}
+const MainLayout: React.FC<Props> = ({children}) => {
 	return (
 		<>
 		<NavBar />

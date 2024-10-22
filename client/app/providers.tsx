@@ -3,6 +3,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { PropsWithChildren, useState } from 'react'
+import { NavigationProvder } from './context/navigationContext'
 
 export function Providers({ children }: PropsWithChildren) {
 	const [client] = useState(
@@ -17,7 +18,9 @@ export function Providers({ children }: PropsWithChildren) {
 
 	return (
 		<QueryClientProvider client={client}>
+			<NavigationProvder>
 			{children}
+			</NavigationProvder>
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	)

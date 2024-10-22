@@ -1,15 +1,15 @@
 import { Container } from '@mui/material'
+import { ReactNode } from 'react'
 import NavigationPages from '../components/navBar'
-import { ReactNode } from 'react';
 
-interface Props {
+export interface Props {
 	children: ReactNode;
 }
 const MainLayout: React.FC<Props> = ({children}) => {
 	return (
 		<>
 		<NavigationPages />
-		<Container style={{margin: "90px 0"}}>
+		<Container style={{margin: "0"}}>
 			{children}
 		</Container>
 		</>

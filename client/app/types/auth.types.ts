@@ -5,12 +5,11 @@ export interface IAuthForm {
 
 export interface IUser {
 	id: number
-	name?: string
+	login?: string
 	email: string
-
-	workInterval?: number
-	breakInterval?: number
-	intervalsCount?: number
+	sex: string
+	number: string
+	dateOfBirth: string
 }
 
 export interface IAuthResponse {

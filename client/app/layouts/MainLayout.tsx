@@ -1,5 +1,5 @@
 import { Container } from '@mui/material'
-import NavBar from '../components/navBar'
+import NavigationPages from '../components/navBar'
 import { ReactNode } from 'react';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 const MainLayout: React.FC<Props> = ({children}) => {
 	return (
 		<>
-		<NavBar />
+		<NavigationPages />
 		<Container style={{margin: "90px 0"}}>
 			{children}
 		</Container>

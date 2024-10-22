@@ -13,10 +13,10 @@ const Auth: React.FC = () => {
 	const { register, handleSubmit, reset } = useForm<IAuthForm>({
 		mode: 'onChange'
 	})
-	const { push } = useRouter()
+	const { replace } = useRouter()
 
 	const goTo = () => {
-		push('/auth/register')
+		replace('/auth/register')
 	}
 
 	const { mutate } = useMutation({
@@ -26,7 +26,7 @@ const Auth: React.FC = () => {
 		onSuccess() {
 			toast.success('Successfully login!')
 			reset()
-			push('/home')
+			replace('/home')
 		}
 	})
 

@@ -30,11 +30,11 @@ export default function ProfilePage() {
 				<p>Нашли неверные данные? <strong>Сообщите нам</strong></p>			</div>
 				<div className={styles.user__input}>
 					<p>Фамилия Имя Отчество</p>
-					<input type="text" value={"Nikita"} disabled={true} />
+					<input type="text" value={"Пивас Майншкафдер Вертолетов"} disabled={true} />
 				</div>
 				<div className={styles.user__input}>
 					<p>Пол</p>
-					<input type="text" disabled={true} />
+					<input type="text" value={"Пивной"} disabled={true} />
 				</div>
 				<div className={styles.user__input}>
 					<p>Логин</p>

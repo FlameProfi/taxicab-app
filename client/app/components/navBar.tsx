@@ -32,7 +32,7 @@ export default function NavBar() {
           <BottomNavigationAction sx={{ color: "#fff", opacity: 0.5, ":active": { opacity: 1}}} label="Главная" icon={<HomeIcon sx={{fill: "#fff"}}/>} />
           <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}}  label="Чат"  icon={<ChatIcon  sx={{fill: "#fff"}} /> } />
           <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}} label="Профиль" icon={<AccountCircleIcon sx={{fill: "#fff"}} />} />
-        </BottomNavigation>
+        </BottomNavigation> 
       </Paper>
     </Box> : ""}
     </>

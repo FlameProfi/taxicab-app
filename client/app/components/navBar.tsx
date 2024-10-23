@@ -1,7 +1,7 @@
 'use client'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import HomeIcon from '@mui/icons-material/Home'
-import SettingsIcon from '@mui/icons-material/Settings'
+import ChatIcon  from '@mui/icons-material/Chat'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import Box from '@mui/material/Box'
@@ -30,7 +30,7 @@ export default function NavBar() {
           
         >
           <BottomNavigationAction sx={{ color: "#fff", opacity: 0.5, ":active": { opacity: 1}}} label="Главная" icon={<HomeIcon sx={{fill: "#fff"}}/>} />
-          <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}}  label="Настройки"  icon={<SettingsIcon sx={{fill: "#fff"}} /> } />
+          <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}}  label="Чат"  icon={<ChatIcon  sx={{fill: "#fff"}} /> } />
           <BottomNavigationAction sx={{color: "#fff", opacity: 0.5}} label="Профиль" icon={<AccountCircleIcon sx={{fill: "#fff"}} />} />
         </BottomNavigation>
       </Paper>

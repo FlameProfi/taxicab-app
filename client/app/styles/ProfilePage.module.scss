@@ -2,9 +2,11 @@
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 15px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	overflow: hidden;
+	justify-content: center;
 	.user__info{
 		width: 95%;
 		// min-width: 650px;
@@ -124,9 +126,9 @@
 	.chat{
 		position: relative;
 		width: 95%;
-		height: 100%;
+		height: 80%;
 		// min-width: 650px;
-		min-height: 300px;
+		min-height: 150px;
 		// max-width: 35vw;
 		max-height: 650px;
 		padding: 15px;
@@ -179,8 +181,15 @@
 				width: 15%;
 				height: calc(1.5em + 0.75rem + 2px);
 				line-height: 1.5;
-
+				position:unset;
 			}
 		}
 	}
 }
+
+@media (max-width: 1080px) {
+	.profile{
+	  overflow: auto;
+	  flex-direction: column; /* Красный фон */
+	}
+  }

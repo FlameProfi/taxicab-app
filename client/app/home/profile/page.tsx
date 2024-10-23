@@ -30,7 +30,7 @@ export default function ProfilePage() {
 				<p>Нашли неверные данные? <strong>Сообщите нам</strong></p>			</div>
 				<div className={styles.user__input}>
 					<p>Фамилия Имя Отчество</p>
-					<input type="text" disabled={true} />
+					<input type="text" value={"Nikita"} disabled={true} />
 				</div>
 				<div className={styles.user__input}>
 					<p>Пол</p>
@@ -56,13 +56,13 @@ export default function ProfilePage() {
 					Сменить пароль
 				</Button>		
 		</div>
-		<div className={styles.chat}>
+		{/* <div className={styles.chat}>
 			<h1>Чат с таксопарком</h1>
 			<div className={styles.chat__input}>
 				<input type="text" />
 				<Button variant="contained" color="success">Отправить</Button>
 			</div>
-		</div>
+		</div> */}
 		</div>
 		</>
 	)

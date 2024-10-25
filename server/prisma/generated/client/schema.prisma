@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String   @id @default(cuid())
+  createAt DateTime @default(now()) @map("created_at")
+  updateAt DateTime @updatedAt @map("update_at")
+
+  email       String    @unique
+  name        String?   @map("full_name")
+  password    String
+  number      String?
+  sex         String?
+  dateOfBirth DateTime? @map("date_of_birth")
+
+  allOrders    Int @default(0) @map("all_orders")
+  goodFeedBack Int @default(0) @map("good_feed_back")
+  income       Int @default(0) @map("income")
+
+  cars Cars[]
+
+  @@map("user")
+}
+
+model Cars {
+  id String @id @default(cuid())
+
+  brand  String
+  model  String
+  number String
+  year   Int
+  color  String
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @map("user_id")
+
+  @@map("cars")
+}
+
+model News {
+  id String @id @default(cuid())
+
+  name        String
+  description String?
+
+  @@map("news")
+}
+
+model Orders {
+  id String @id @default(cuid())
+
+  startingPoint String @map("starting_point")
+  endPoint      String @map("end_point")
+  price         Int
+
+  driver        String?
+  tips          Int?
+  paymentMethod PaymentMethod @map("payment_method")
+
+  @@map("orders")
+}
+
+enum PaymentMethod {
+  card
+  cash
+  SBP
+}

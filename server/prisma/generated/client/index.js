@@ -33,11 +33,11 @@ exports.$Enums = {}
 
 /**
  * Prisma Client JS version: 5.21.0
- * Query Engine version: bf0e5e8a04cada8225617067eaa03d041e2bba36
+ * Query Engine version: 605197351a3c8bdd595af2d2a9bc3025bca48ea2
  */
 Prisma.prismaVersion = {
   client: "5.21.0",
-  engine: "bf0e5e8a04cada8225617067eaa03d041e2bba36"
+  engine: "605197351a3c8bdd595af2d2a9bc3025bca48ea2"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -169,7 +169,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\MAS_PB_14\\Desktop\\planner-backend-main\\prisma\\generated\\client",
+      "value": "D:\\taxicab\\taxicab-app\\server\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -183,7 +183,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\MAS_PB_14\\Desktop\\planner-backend-main\\prisma\\schema.prisma",
+    "sourceFilePath": "D:\\taxicab\\taxicab-app\\server\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -192,7 +192,7 @@ const config = {
   },
   "relativePath": "../..",
   "clientVersion": "5.21.0",
-  "engineVersion": "bf0e5e8a04cada8225617067eaa03d041e2bba36",
+  "engineVersion": "605197351a3c8bdd595af2d2a9bc3025bca48ea2",
   "datasourceNames": [
     "db"
   ],
